@@ -1,0 +1,21 @@
+server:
+  port: 8085
+  address: 0.0.0.0
+
+spring:
+  config:
+    activate:
+      on-profile: prod
+
+  data:
+    mongodb:
+      uri: ${MONGODB_URI}
+      database: bankx
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+
+risk:
+  service:
+    base-url: https://apim-cardops-demo.azure-api.net/risk/mock
